@@ -14,9 +14,11 @@ Hoptoad.secure = true # if your account is SSL enabled
 # find an individual error:
 Hoptoad::Error.find(12345)
 
-# or get a list of errors using:
-Hoptoad::Error.find(:all)
-Hoptoad::Error.find(:all, { :page => 2 })
+# find all notices for a particular error
+Hoptoad::Notice.all(1234) # 1234 == error id
+
+# find a particular notice
+Hoptoad::Notice.find(12345, 1234) # 12345 == notice id, 1234 == error id
 </code>
 </pre>
 
